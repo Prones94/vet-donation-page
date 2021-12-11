@@ -17,12 +17,12 @@ const RootStyle = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-const Investment = () => {
+const Invest = () => {
   return (
     <RootStyle title="Pricing | Minimal-UI">
       <Container maxWidth="lg">
         <Typography variant="h3" align="center" paragraph>
-          Investment plans for your
+          Invest plans for your
           <br /> community&apos;s size and needs
         </Typography>
         <Typography align="center" sx={{ color: 'text.secondary' }}>
@@ -50,4 +50,4 @@ const Investment = () => {
   );
 }
 
-export { Investment }
+export { Invest }
