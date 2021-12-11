@@ -42,8 +42,8 @@ const Register =()=> {
       <Container>
         <ContentStyle>
           <Box sx={{ mb: 5, display: 'flex', alignItems: 'center' }}>
-            <Box sx={{ flexGrow: 1 }}>
-              <Typography variant="h2" gutterBottom>
+            <Box sx={{ flexGrow: 1, textAlign: 'center' }}>
+              <Typography variant="h3" gutterBottom>
                 Register
               </Typography >
             </Box>
