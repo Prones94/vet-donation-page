@@ -1,7 +1,7 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { Header } from './containers'
-import { Home } from './pages'
+import { Home, Register } from './pages'
 
 export function App () {
   return (
@@ -9,6 +9,7 @@ export function App () {
       <Header />
       <Routes>
         <Route path="/" element={ <Home /> } />
+        <Route path="/Register" element={ <Register /> } />
       </Routes>
     </>
   )
