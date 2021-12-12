@@ -1,16 +1,11 @@
-import { Link as RouterLink } from 'react-router-dom';
 // material
 import { styled } from '@mui/material/styles';
 import {
   Box,
-  Card,
   Stack,
   Link,
-  Alert,
-  Tooltip,
   Container,
   Typography,
-  Button,
 } from '@mui/material';
 // components
 import { LoginForm } from './LoginForm';
@@ -41,12 +36,9 @@ const Login = () => {
       <Container maxWidth='sm'>
         <ContentStyle>
           <Stack direction='row' alignItems='center' sx={{ mb: 5 }}>
-            <Box sx={{ flexGrow: 1 }}>
-              <Typography variant='h4' gutterBottom>
-                Sign in to Minimal
-              </Typography>
-              <Typography sx={{ color: 'text.secondary' }}>
-                Enter your details below.
+            <Box sx={{ flexGrow: 1, textAlign: 'center' }}>
+              <Typography variant='h3'>
+                Welcome Back
               </Typography>
             </Box>
           </Stack>
