@@ -3,6 +3,7 @@
   "author": "",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:8082/",
   "scripts": {
     "update": "git pull origin develop && npm install",
     "start": "craco start",
@@ -52,7 +53,6 @@
     "formik": "^2.2.9",
     "framer-motion": "^5.4.5",
     "graphql": "^16.1.0",
-    "jwt-decode": "^3.1.2",
     "notistack": "^2.0.3",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
