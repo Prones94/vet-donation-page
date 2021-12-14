@@ -78,10 +78,14 @@ const Donate = () => {
 	const theme = useTheme();
 	const isLight = theme.palette.mode === 'light';
 	const isRTL = theme.direction === 'rtl';
+	const shadow = `-40px 40px 80px ${alpha(
+		isLight ? theme.palette.grey[500] : theme.palette.common.black,
+		0.48
+	)}`;
 
-	const screenLeftAnimate = variantScreenLeft;
-	const screenCenterAnimate = variantScreenCenter;
-	const screenRightAnimate = variantScreenRight;
+	// const screenLeftAnimate = variantScreenLeft;
+	// const screenCenterAnimate = variantScreenCenter;
+	// const screenRightAnimate = variantScreenRight;
 
 	return (
 		<RootStyle>
@@ -97,15 +101,17 @@ const Donate = () => {
 							<Typography
 								component='p'
 								variant='overline'
-								sx={{ mb: 2, color: 'text.secondary' }}>
-								Interface Starter Kit
+								sx={{ mb: 2, color: 'info.dark' }}>
+								Donations
 							</Typography>
 							{/* </MotionInView> */}
 
 							{/* <MotionInView variants={varFadeInUp}> */}
-							<Typography variant='h2' sx={{ mb: 3 }}>
-								Huge pack <br />
-								of elements
+							<Typography variant='h2' sx={{ mb: 3, color: 'grey.600' }}>
+								Get <br />
+								<Typography variant='h2' sx={{ color: 'info.light' }}>
+									Involved
+								</Typography>
 							</Typography>
 							{/* </MotionInView> */}
 
@@ -113,18 +119,20 @@ const Donate = () => {
 							<Typography
 								sx={{
 									mb: 5,
-									color: isLight ? 'text.secondary' : 'common.white',
+									color: isLight ? 'grey.700' : 'common.white',
 								}}>
-								We collected most popular elements. Menu, sliders, buttons,
-								inputs etc. are all here. Just dive in!
+								Your support helps make the{' '}
+								<strong>Secure, No Spy, No Censor</strong>{' '}
+								<em>Social Media Platform</em> a reality.
 							</Typography>
 							{/* </MotionInView> */}
 
 							{/* <MotionInView variants={varFadeInUp}> */}
 							<Button
 								size='large'
-								color='inherit'
-								variant='outlined'
+								sx={{ backgroundColor: 'info.main' }}
+								// color='inherit'
+								variant='contained'
 								component={RouterLink}
 								to={'/'}>
 								Donate now
@@ -132,52 +140,20 @@ const Donate = () => {
 							{/* </MotionInView> */}
 						</ContentStyle>
 					</Grid>
-
-					<Grid item xs={12} md={8} dir='ltr'>
+					{/* <Grid item xs={12} md={8} dir='ltr'>
+						<img src={image} alt='image' />
+					</Grid> */}
+					<Grid item xs={6}>
+						{/* <MotionInView variants={varFadeInUp}> */}
 						<Box
+							component='img'
+							src='/static/home/screen_light_1.png'
 							sx={{
-								display: 'flex',
-								alignItems: 'center',
-								position: 'relative',
-								justifyContent: 'center',
-							}}>
-							{[...Array(3)].map((_, index) => (
-								<ScreenStyle
-									key={index}
-									threshold={0.72}
-									variants={{
-										...(index === 0 && screenLeftAnimate),
-										...(index === 1 && screenCenterAnimate),
-										...(index === 2 && screenRightAnimate),
-									}}
-									transition={{ duration: 0.72, ease: 'easeOut' }}
-									sx={{
-										boxShadow: `${isRTL ? -80 : 80}px -40px 80px ${alpha(
-											isLight
-												? theme.palette.grey[600]
-												: theme.palette.common.black,
-											0.48
-										)}`,
-										...(index === 0 && {
-											zIndex: 3,
-											position: 'absolute',
-										}),
-										...(index === 1 && { zIndex: 2 }),
-										...(index === 2 && {
-											zIndex: 1,
-											position: 'absolute',
-											boxShadow: 'none',
-										}),
-									}}>
-									<img
-										alt={`screen ${index + 1}`}
-										src={`/static/home/screen_${isLight ? 'light' : 'dark'}_${
-											index + 1
-										}.png`}
-									/>
-								</ScreenStyle>
-							))}
-						</Box>
+								borderRadius: 2,
+								boxShadow: shadow,
+							}}
+						/>
+						{/* </MotionInView> */}
 					</Grid>
 				</Grid>
 			</Container>
