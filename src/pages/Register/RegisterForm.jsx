@@ -10,20 +10,19 @@ import eyeOffFill from '@iconify/icons-eva/eye-off-fill';
 import { Stack, TextField, IconButton, InputAdornment, Alert } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
 
+
 // ---------------------------------------------
 // To add later *Troy
-// import { useMutation } from "@apollo/client";
-// import { ADD_USER } from "../utils/mutations";
-// import Auth from "../utils/auth";
+import { useMutation } from "@apollo/client";
+import { REGISTER_USER } from '../../graphql';
+import tokenAuth from '../../auth/webtoken';
 // -----------------------------------------------
 
 
-// ----------------------------------------------------
-// Mutation to add later *Troy
-// const [addUser, { error }] = useMutation(ADD_USER);
-// ---------------------------------------------------
+
 
 const RegisterForm =()=> {
+  const [registerUser, { error }] = useMutation(REGISTER_USER);
 //   const { enqueueSnackbar, closeSnackbar } = useSnackbar();
   const [showPassword, setShowPassword] = useState(false);
 
@@ -34,7 +33,6 @@ const RegisterForm =()=> {
     password: Yup.string().required('Password is required'),
     confirmPassword: Yup.string()
     .oneOf([Yup.ref('password'), null], 'Passwords must match')
-
   });
 
   const formik = useFormik({
@@ -46,18 +44,19 @@ const RegisterForm =()=> {
       confirmPassword: ''
     },
     validationSchema: RegisterSchema,
-    onSubmit: async (values, { setErrors, setSubmitting }) => {
+    onSubmit: async ({firstName, lastName, email, password}, { setErrors, setSubmitting }) => {
 
 // -------------------------------------------------------------------------
-        // webtoken auth to add later *Troy
-        // try {
-        //     const { data } = await addUser({ variables: { ...values} });
-      
-        //     Auth.login(data.addUser.token);
-        // setSubmitting(false); 
-        //   } catch (e) {
-        //     console.error(e);
-        //   }
+        try {
+            const  {data}  = await registerUser({ variables: {firstName, lastName, email, password} });
+            tokenAuth.login(data.register.token);
+            setSubmitting(false); 
+          } catch (e) {
+            console.log(error instanceof Error);
+            console.error(e);
+            setErrors(true);
+            setSubmitting(false);
+          }
         // needs: setSubmitting hook, setErrors hook
 // ---------------------------------------------------------------------------
 
@@ -141,6 +140,7 @@ const RegisterForm =()=> {
           <LoadingButton fullWidth size="large" type="submit" variant="contained" loading={isSubmitting}>
             Register
           </LoadingButton>
+          {error && <div>Signup failed</div>}
         </Stack>
       </Form>
     </FormikProvider>

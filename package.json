@@ -3,6 +3,7 @@
   "author": "",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:8082",
   "scripts": {
     "update": "git pull origin develop && npm install",
     "start": "craco start",
@@ -73,3 +74,4 @@
     "postcss": "^7.0.39",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"
   }
+}

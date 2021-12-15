@@ -2,10 +2,12 @@ import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { Header } from './containers'
 import { Landing, Register, Invest, Login } from './pages'
+import { userAuth } from './context'
+import { ApolloProvider } from '@apollo/client';
 
 export function App () {
   return (
-    <>
+    <ApolloProvider client={userAuth}>
       <Header />
       
       <Routes>
@@ -14,6 +16,6 @@ export function App () {
         <Route path="/register" element={ <Register /> } />
         <Route path='/login' element={<Login />} />
       </Routes>
-    </>
+      </ApolloProvider>
   )
 }
