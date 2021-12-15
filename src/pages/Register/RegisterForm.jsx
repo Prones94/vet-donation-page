@@ -55,6 +55,7 @@ const RegisterForm =()=> {
             console.log(error instanceof Error);
             console.error(e);
             setErrors(true);
+            setSubmitting(false);
           }
         // needs: setSubmitting hook, setErrors hook
 // ---------------------------------------------------------------------------
