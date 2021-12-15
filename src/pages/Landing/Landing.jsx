@@ -1,6 +1,6 @@
 import React from 'react'
-import { Hero, Donate, Invest } from './'
 
+import { Donate, Hero, Invest } from './'
 
 const Landing = () => {
   return (
