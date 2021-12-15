@@ -98,12 +98,12 @@ const Donate = () => {
 						sx={{ display: 'flex', alignItems: 'center' }}>
 						<ContentStyle>
 							{/* <MotionInView variants={varFadeInUp}> */}
-							<Typography
+							{/* <Typography
 								component='p'
 								variant='overline'
 								sx={{ mb: 2, color: 'info.dark' }}>
 								Donations
-							</Typography>
+							</Typography> */}
 							{/* </MotionInView> */}
 
 							{/* <MotionInView variants={varFadeInUp}> */}
