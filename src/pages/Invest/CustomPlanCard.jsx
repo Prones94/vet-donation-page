@@ -1,12 +1,6 @@
 import PropTypes from 'prop-types';
-// import { Link as RouterLink } from 'react-router-dom';
-// material
 import { styled } from '@mui/material/styles';
 import { Slider, Card, Button, Typography, Box } from '@mui/material';
-// routes
-// import { PATH_DASHBOARD } from '../../../routes/paths';
-//
-// import { Label } from '../../components';
 
 // ----------------------------------------------------------------------
 
