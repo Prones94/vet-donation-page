@@ -1,19 +1,19 @@
 import decode from "jwt-decode";
 
 class tokenAuth {
-  login(idToken) {
-    localStorage.setItem("id_token", idToken);
+  login(token) {
+    localStorage.setItem("token", token);
 
     window.location.assign("/");
   }
 
   loggedIn() {
-    const token = localStorage.getItem("id_token");
+    const token = localStorage.getItem("token");
     return !!token && !this.isTokenExpired(token);
   }
 
   logout(){
-    localStorage.removeItem("id_token");
+    localStorage.removeItem("token");
     window.location.assign('/');
   }
 
@@ -28,5 +28,4 @@ class tokenAuth {
     }
   }
 }
-
 export default new tokenAuth();

@@ -3,7 +3,7 @@
   "author": "",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:8082/",
+  "proxy": "http://localhost:8082",
   "scripts": {
     "update": "git pull origin develop && npm install",
     "start": "craco start",

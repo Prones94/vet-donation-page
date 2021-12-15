@@ -3,13 +3,8 @@ import { Link as RouterLink } from 'react-router-dom';
 
 import { styled } from '@mui/material/styles';
 
-
 import { Box, Link, Container, Typography } from '@mui/material';
 
-
-// import { PATH_AUTH } from '../../routes/paths';
-
-// import Page from '../../components/Page';
 import { RegisterForm } from './RegisterForm';
 
 // ----------------------------------------------------------------------
@@ -32,6 +27,8 @@ const ContentStyle = styled('div')(({ theme }) => ({
 }));
 
 // ----------------------------------------------------------------------
+
+
 
 const Register =()=> {
 
