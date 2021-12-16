@@ -1,12 +1,14 @@
+import { useState, useMemo } from 'react'
 import PropTypes from 'prop-types';
-import { Link as RouterLink } from 'react-router-dom';
-// material
 import { styled } from '@mui/material/styles';
-import { Card, Button, Typography, Box } from '@mui/material';
-// routes
-// import { PATH_DASHBOARD } from '../../../routes/paths';
-//
-// import { Label } from '../../components';
+import { Slider, Card, Button, Typography, Box } from '@mui/material';
+
+import FormControl from '@mui/material/FormControl';
+import Input from '@mui/material/Input';
+import InputLabel from '@mui/material/InputLabel';
+import InputAdornment from '@mui/material/InputAdornment';
+
+import axios from 'axios';
 
 // ----------------------------------------------------------------------
 
@@ -25,54 +27,112 @@ const RootStyle = styled(Card)(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-const InvestPlanCard = ({ card, index }) => {
-  const { payment, icon, price, caption, labelAction } = card;
+const InvestPlanCard = ({ card }) => {
+  const { payment, icon, share, custom } = card;
+
+  const [value, setValue] = useState(share);
+  const [isAuth] = useState(false);
+
+  const totalShare = useMemo(() => (
+    (value * 2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+  ), [ value ]);
+
+  const totalPrice = useMemo(() => (
+    new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+    }).format(value)
+  ), [ value ]);
+
+  const handleSliderChange = (event, newValue) => {
+    if (typeof newValue === 'number') setValue(newValue);
+  };
+
+  const handleInputChange = (event) => {
+    if (event.target.value) setValue(Number(event.target.value));
+  };
+
+  const submitToCheckout = async () => {
+    if (!isAuth) return
+    try {
+      const response = await axios.post('URL', { quantity: value })
+      console.log(response);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   return (
     <RootStyle>
       <Typography variant="overline" sx={{ color: 'text.secondary' }}>
-        {payment}
+        { payment }
       </Typography>
 
       <Box sx={{ display: 'flex', justifyContent: 'flex-end', my: 2 }}>
-        { index < 2 && (
-          <Typography variant="subtitle1" sx={{ color: 'text.secondary' }}>
-            $
-          </Typography>
-        )}
-        
         <Typography variant="h2" sx={{ mx: 1 }}>
-          {price}
+          { totalShare }
+        </Typography>
+
+        <Typography
+          gutterBottom
+          component="span"
+          variant="subtitle2"
+          sx={{ alignSelf: 'flex-end', color: 'text.secondary' }}
+        >
+          shares
         </Typography>
       </Box>
 
-      <Typography
-        variant="caption"
-        sx={{
-          color: 'primary.main',
-          textTransform: 'capitalize'
-        }}
-      >
-        {caption}
-      </Typography>
+      { !custom && (
+        <Typography
+          variant="caption"
+          sx={{ color: 'primary.main', textTransform: 'capitalize' }}
+        >
+          { totalPrice } Total
+        </Typography>
+      )}
 
-      <Box sx={{ width: 80, height: 80, mt: 3 }}>
+      { custom && (
+        <>
+          <Slider 
+            step={100}
+            min={3000}
+            max={100000}
+            value={value}
+            onChange={handleSliderChange}
+            aria-label="Default" 
+          />
+          <FormControl fullWidth sx={{ m: 1 }} variant="standard">
+            <InputLabel htmlFor="amount">Total Amount</InputLabel>
+            <Input
+              type="number"
+              id="amount"
+              value={value}
+              onChange={handleInputChange}
+              inputProps={{ step: 100, min: 3000, max: 100000 }}
+              startAdornment={<InputAdornment position="start">$</InputAdornment>}
+            />
+          </FormControl>
+        </>
+      )}
+
+      <Box sx={{ width: 80, height: 80, my: 3 }}>
         {icon}
       </Box>
 
       <Button
-        to="/"
+        // to="/"
         fullWidth
         size="large"
         variant="contained"
-        disabled={index === 2}
-        component={RouterLink}
+        disabled={isAuth}
+        // component={RouterLink}
       >
-        {labelAction}
+        Invest Checkout
       </Button>
     </RootStyle>
   );
-}
+};
 
 InvestPlanCard.propTypes = {
   index: PropTypes.number,

@@ -2,24 +2,24 @@ import { PlanFreeIcon, PlanStarterIcon, PlanPremiumIcon } from '../../assets';
 
 export const plans = [
   {
-    payment: 'basic',
+    payment: 'option 1',
     icon: <PlanFreeIcon />,
     price: 1000,
-    caption: 'you get 500 a share',
-    labelAction: 'current plan'
+    share: 500,
+    custom: false,
   },
   {
-    payment: 'starter',
+    payment: 'option 2',
     icon: <PlanStarterIcon />,
     price: 5000,
-    caption: 'you get 2,500 a share',
-    labelAction: 'choose starter'
+    share: 2500,
+    custom: false,
   },
   {
-    payment: 'premium',
+    payment: 'custom option',
     icon: <PlanPremiumIcon />,
-    price: 9.99,
-    caption: 'you get __ a share',
-    labelAction: 'choose premium'
+    price: 6000,
+    share: 3000,
+    custom: true,
   }
 ];
