@@ -1,7 +1,4 @@
-import flashFill from '@iconify/icons-eva/flash-fill';
-import { Icon } from '@iconify/react';
-import { Box, Button, Container, Link, Stack, Typography } from '@mui/material';
-// material
+import { Button, Container, Stack, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { Link as RouterLink } from 'react-router-dom';
 
@@ -14,15 +11,14 @@ const RootStyle = styled("div")(({ theme }) => ({
     width: '100%',
     height: '100vh',
     display: 'flex',
-    position: 'fixed',
     alignItems: 'center'
   }
 }));
 
 const ContentStyle = styled((props) => <Stack spacing={5} {...props} />)(({ theme }) => ({
   zIndex: 10,
-  maxWidth: 860,
-  border: "solid 1px red",
+  maxWidth: 650,
+  border: "none",
   margin: 'auto',
   textAlign: 'center',
   position: 'relative',
@@ -57,6 +53,17 @@ const HeroImgStyle = styled("img")(({ theme }) => ({
   }
 }));
 
+const ButtonContainerStyle = styled("div")(({ theme }) => ({
+  display: "flex",
+  gap: "1em",
+  [theme.breakpoints.down('sm')]: {
+    justifyContent: "center",
+    flexDirection: "column",
+    alignItems: "center"
+  }
+
+}))
+
 // ----------------------------------------------------------------------
 
 const Hero = () => {
@@ -67,49 +74,49 @@ const Hero = () => {
 
         <HeroImgStyle alt="hero" src="/static/home/hero.png" />
 
-        {/* Header */}
+        {/* Hero Container */}
         <Container maxWidth="lg">
           <ContentStyle>
-              <Typography variant="h1" sx={{ color: 'common.white' }}>
-                Welcome to <br />
-                our site. Join <br />
-                <Typography component="span" variant="h1" sx={{ color: 'primary.main' }}>
-                  Secure Social Media
-                </Typography>
-                <br /> today!
+            {/* Header */}
+            <Typography variant="h2" sx={{ color: 'common.white' }}>
+              Welcome to <br />
+              <Typography component="span" variant="h2" sx={{ color: 'primary.main' }}>
+                Secure Social Media.
               </Typography>
+              <br /> Join today!
+            </Typography>
 
             {/* Tagline */}
               <Typography sx={{ color: 'common.white' }}>
-                Here goes an example of a tagline or random words to describe the company. More words. More words. End statement.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
               </Typography>
 
-            {/* Donate Button */}
-              <Button
-                size="large"
-                variant="contained"
-                component={RouterLink}
-                to="/"
-                startIcon={<Icon icon={flashFill} width={20} height={20} />}
-              >
-                Donate Here
+            {/* Button Container */}
+            <ButtonContainerStyle>
+              {/* Donate Button */}
+                <Button
+                  size="medium"
+                  variant="contained"
+                  component={RouterLink}
+                  to="/"
+                >
+                  Donate Here
+                </Button>
+              <br />
+              {/* Invest Button */}
+                <Button
+                  size="medium"
+                  variant="contained"
+                  component={RouterLink}
+                  to="/"
+                >
+                  Invest Here     
               </Button>
-
-            {/* Invest Button */}
-              <Button
-                size="large"
-                variant="contained"
-                component={RouterLink}
-                to="/"
-                startIcon={<Icon icon={flashFill} width={20} height={20} />}
-              >
-                Ready to Invest
-              </Button>
-
+            </ButtonContainerStyle>
+            
           </ContentStyle>
         </Container>
       </RootStyle>
-      <Box sx={{ height: { md: '100vh' } }} />
     </>
   );
 }
