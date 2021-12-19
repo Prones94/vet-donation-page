@@ -101,16 +101,18 @@ const Donate = () => {
 							{/* <Typography
 								component='p'
 								variant='overline'
-								sx={{ mb: 2, color: 'info.dark' }}>
-								Donations
+								sx={{ mb: 2, color: 'info.darker' }}>
+								Get Involved
 							</Typography> */}
 							{/* </MotionInView> */}
 
 							{/* <MotionInView variants={varFadeInUp}> */}
-							<Typography variant='h2' sx={{ mb: 3, color: 'grey.600' }}>
-								Get <br />
-								<Typography variant='h2' sx={{ color: 'info.light' }}>
-									Involved
+							<Typography sx={{ color: 'info.main', fontSize: 50 }}>
+								Take{' '}
+								<Typography
+									variant='span'
+									sx={{ fontSize: 70, color: 'info.dark' }}>
+									Action
 								</Typography>
 							</Typography>
 							{/* </MotionInView> */}
@@ -119,10 +121,15 @@ const Donate = () => {
 							<Typography
 								sx={{
 									mb: 5,
-									color: isLight ? 'grey.700' : 'common.white',
+									// color: isLight ? 'grey.700' : 'common.white',
+									fontSize: 20,
 								}}>
 								Your support helps make the{' '}
-								<strong>Secure, No Spy, No Censor</strong>{' '}
+								<Typography
+									sx={{ fontSize: 22, color: 'info.dark' }}
+									variant='span'>
+									Secure, No Spy, No Censor
+								</Typography>{' '}
 								<em>Social Media Platform</em> a reality.
 							</Typography>
 							{/* </MotionInView> */}
