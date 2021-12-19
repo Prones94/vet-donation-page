@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Donate, Hero, Invest } from './';
+import { Donate, Hero, Invest, Footer } from './';
 
 const Landing = () => {
 	return (
@@ -8,6 +8,7 @@ const Landing = () => {
 			{/* <Hero /> */}
 			<Donate />
 			<Invest />
+			<Footer />
 		</>
 	);
 };
