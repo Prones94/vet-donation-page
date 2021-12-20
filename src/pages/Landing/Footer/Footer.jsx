@@ -65,7 +65,7 @@ const RootStyle = styled('div')(({ theme }) => ({
 
 const Footer = () => {
 	return (
-		<RootStyle sx={{ color: 'grey.300', backgroundColor: 'grey.900' }}>
+		<RootStyle sx={{ color: 'grey.300', backgroundColor: 'grey.800' }}>
 			<Divider />
 			<Container maxWidth='lg' sx={{ pt: 10 }}>
 				<Grid
