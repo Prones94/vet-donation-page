@@ -20,7 +20,7 @@ import {
 // import { PATH_PAGE } from '../../routes/paths';
 //
 // import Logo from '../../components/Logo';
-import Logo from '../../../components/Logo';
+import Logo from '../../components/Logo';
 
 // ----------------------------------------------------------------------
 

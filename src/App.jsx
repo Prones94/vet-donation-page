@@ -4,6 +4,7 @@ import { Header } from './containers';
 import { Landing, Register, Invest, Login } from './pages';
 import { userAuth } from './context';
 import { ApolloProvider } from '@apollo/client';
+import { Footer } from './containers/Footer/Footer';
 
 export function App() {
 	return (
@@ -16,6 +17,7 @@ export function App() {
 				<Route path='/register' element={<Register />} />
 				<Route path='/login' element={<Login />} />
 			</Routes>
+			<Footer />
 		</ApolloProvider>
 	);
 }
