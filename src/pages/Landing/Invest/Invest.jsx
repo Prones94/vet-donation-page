@@ -1,12 +1,6 @@
-import React from 'react';
-// import { Icon } from '@iconify/react';
-// import roundArrowRightAlt from '@iconify/icons-ic/round-arrow-right-alt';
-// material
-import { alpha, useTheme, styled } from '@mui/material/styles';
-import { Box, Grid, Button, Container, Typography } from '@mui/material';
-// utils
-// import { MHidden } from '../@material-extend';
-// import { varFadeInUp, varFadeInRight, MotionInView } from '../animate';
+import React from 'react'
+import { alpha, styled, useTheme } from '@mui/material/styles';
+import { Box, Button, Container, Grid, Typography } from '@mui/material';
 
 // ----------------------------------------------------------------------
 
