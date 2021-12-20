@@ -1,14 +1,7 @@
-import React from 'react';
-// import { Icon } from '@iconify/react';
-// import roundArrowRightAlt from '@iconify/icons-ic/round-arrow-right-alt';
-// material
+import React from 'react'
+import { Link as RouterLink } from 'react-router-dom';
 import { alpha, useTheme, styled } from '@mui/material/styles';
 import { Box, Grid, Button, Container, Typography } from '@mui/material';
-// utils
-// import { MHidden } from '../@material-extend';
-// import { varFadeInUp, varFadeInRight, MotionInView } from '../animate';
-
-// ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({
 	textAlign: 'center',
