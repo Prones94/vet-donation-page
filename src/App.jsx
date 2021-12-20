@@ -1,8 +1,8 @@
-import React from 'react'
-import { Routes, Route } from 'react-router-dom'
-import { Header } from './containers'
-import { Landing, Register, Invest, Login } from './pages'
-import { userAuth } from './context'
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { Header, Footer } from './containers';
+import { Landing, Register, Invest, Login } from './pages';
+import { userAuth } from './context';
 import { ApolloProvider } from '@apollo/client';
 
 export function App () {
@@ -12,10 +12,13 @@ export function App () {
       
       <Routes>
         <Route path="/" element={ <Landing /> } />
-        <Route path="/invest" element={ <Invest /> } />
         <Route path="/register" element={ <Register /> } />
         <Route path='/login' element={<Login />} />
+        <Route path="/donate" element={ <Donate /> } />
+        <Route path="/invest" element={ <Invest /> } />
       </Routes>
-      </ApolloProvider>
-  )
-}
+
+      <Footer />
+    </ApolloProvider>
+  );
+};

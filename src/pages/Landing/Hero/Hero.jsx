@@ -1,6 +1,8 @@
-import { Button, Container, Stack, Typography } from '@mui/material';
+import { Box, Button, Container, Stack, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { Link as RouterLink } from 'react-router-dom';
+import flashFill from '@iconify/icons-eva/flash-fill';
+import { Icon } from '@iconify/react';
 
 const RootStyle = styled("div")(({ theme }) => ({
   position: 'relative',
@@ -30,27 +32,27 @@ const ContentStyle = styled((props) => <Stack spacing={5} {...props} />)(({ them
   }
 }));
 
-const HeroOverlayStyle = styled("img")({
-  zIndex: 9,
-  width: '100%',
-  height: '100%',
-  objectFit: 'cover',
-  position: 'absolute'
+const HeroOverlayStyle = styled('img')({
+	zIndex: 9,
+	width: '100%',
+	height: '100%',
+	objectFit: 'cover',
+	position: 'absolute',
 });
 
-const HeroImgStyle = styled("img")(({ theme }) => ({
-  top: 0,
-  right: 0,
-  bottom: 0,
-  zIndex: 8,
-  width: '100%',
-  margin: 'auto',
-  position: 'absolute',
-  [theme.breakpoints.up('lg')]: {
-    right: '8%',
-    width: 'auto',
-    height: '48vh'
-  }
+const HeroImgStyle = styled('img')(({ theme }) => ({
+	top: 0,
+	right: 0,
+	bottom: 0,
+	zIndex: 8,
+	width: '100%',
+	margin: 'auto',
+	position: 'absolute',
+	[theme.breakpoints.up('lg')]: {
+		right: '8%',
+		width: 'auto',
+		height: '48vh',
+	},
 }));
 
 const ButtonContainerStyle = styled("div")(({ theme }) => ({
@@ -67,12 +69,10 @@ const ButtonContainerStyle = styled("div")(({ theme }) => ({
 // ----------------------------------------------------------------------
 
 const Hero = () => {
-  return (
-    <>
-      <RootStyle initial="initial" animate="animate" >
-        <HeroOverlayStyle alt="overlay" src="/static/overlay.svg" />
-
-        <HeroImgStyle alt="hero" src="/static/home/hero.png" />
+	return (
+		<>
+			<RootStyle initial='initial' animate='animate'>
+				<HeroOverlayStyle alt='overlay' src='/static/overlay.svg' />
 
         {/* Hero Container */}
         <Container maxWidth="lg">
@@ -121,4 +121,4 @@ const Hero = () => {
   );
 }
 
-export { Hero }
+export { Hero };
