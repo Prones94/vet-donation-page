@@ -1,8 +1,7 @@
 import React from 'react'
-import { alpha, styled, useTheme } from '@mui/material/styles';
-import { Box, Button, Container, Grid, Typography } from '@mui/material';
-
-// ----------------------------------------------------------------------
+import { Link as RouterLink } from 'react-router-dom';
+import { alpha, useTheme, styled } from '@mui/material/styles';
+import { Box, Grid, Button, Container, Typography } from '@mui/material';
 
 const RootStyle = styled('div')(({ theme }) => ({
 	textAlign: 'center',
