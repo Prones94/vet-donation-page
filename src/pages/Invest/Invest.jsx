@@ -38,9 +38,9 @@ const Invest = () => {
         )}
 
         <Grid container spacing={3} sx={{ mt: 1 }}>
-          { plans?.map((card, index) => (
+          { plans?.map((card) => (
             <Grid item xs={12} md={4} key={card.payment}>
-              <InvestPlanCard card={card} index={index} />
+              <InvestPlanCard card={card} />
             </Grid>
           ))}
         </Grid>
