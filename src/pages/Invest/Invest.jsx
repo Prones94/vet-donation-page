@@ -35,16 +35,16 @@ const Invest = () => {
 					</Box>
 				)}
 
-				<Grid container spacing={3} sx={{ mt: 1 }}>
-					{plans?.map((card, index) => (
-						<Grid item xs={12} md={4} key={card.payment}>
-							<InvestPlanCard card={card} index={index} />
-						</Grid>
-					))}
-				</Grid>
-			</Container>
-		</RootStyle>
-	);
+        <Grid container spacing={3} sx={{ mt: 1 }}>
+          { plans?.map((card) => (
+            <Grid item xs={12} md={4} key={card.payment}>
+              <InvestPlanCard card={card} />
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
+    </RootStyle>
+  );
 };
 
 export { Invest };
