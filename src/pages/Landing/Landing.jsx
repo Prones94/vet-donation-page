@@ -1,15 +1,16 @@
-import React from 'react'
+import React from 'react';
 
-import { Donate, Hero, Invest } from './'
+import { Donate, Invest } from './';
+// import { Donate, Hero, Invest } from './';
 
 const Landing = () => {
-  return (
-    <>
-      <Hero />
-      <Donate />
-      <Invest /> 
-    </>
-  )
-}
+	return (
+		<>
+			{/* <Hero /> */}
+			<Donate />
+			<Invest />
+		</>
+	);
+};
 
-export { Landing }
+export { Landing };
