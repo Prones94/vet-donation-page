@@ -86,7 +86,7 @@ function PlanCard({ plan, cardIndex }) {
     </Card>
   );
 }
-function Features() {
+const Features = () => {
   return (
     <RootStyle>
       <Container maxWidth="lg">
