@@ -46,7 +46,8 @@ PlanCard.propTypes = {
     options: PropTypes.arrayOf(PropTypes.string)
   })
 };
-function PlanCard({ plan, cardIndex }) {
+
+const PlanCard = ({ plan, cardIndex }) => {
   const theme = useTheme();
   const { license } = plan;
   const isLight = theme.palette.mode === "light";
