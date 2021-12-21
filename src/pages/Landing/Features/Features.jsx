@@ -38,15 +38,8 @@ const RootStyle = styled("div")(({ theme }) => ({
   }
 }));
 // ----------------------------------------------------------------------
-PlanCard.propTypes = {
-  cardIndex: PropTypes.number,
-  plan: PropTypes.shape({
-    license: PropTypes.any,
-    commons: PropTypes.arrayOf(PropTypes.string),
-    options: PropTypes.arrayOf(PropTypes.string)
-  })
-};
-function PlanCard({ plan, cardIndex }) {
+
+const PlanCard = ({ plan, cardIndex }) => {
   const theme = useTheme();
   const { license } = plan;
   const isLight = theme.palette.mode === "light";
@@ -86,6 +79,7 @@ function PlanCard({ plan, cardIndex }) {
     </Card>
   );
 }
+
 const Features = () => {
   return (
     <RootStyle>
@@ -113,4 +107,14 @@ const Features = () => {
     </RootStyle>
   );
 }
+
+PlanCard.propTypes = {
+  cardIndex: PropTypes.number,
+  plan: PropTypes.shape({
+    license: PropTypes.any,
+    commons: PropTypes.arrayOf(PropTypes.string),
+    options: PropTypes.arrayOf(PropTypes.string)
+  })
+};
+
 export { Features };

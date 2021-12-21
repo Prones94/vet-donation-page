@@ -1,12 +1,6 @@
 import { Box, Button, Container, Grid, Typography } from '@mui/material';
-// material
 import { alpha, styled, useTheme } from '@mui/material/styles';
 import { Link as RouterLink } from 'react-router-dom';
-
-// routes
-// import { PATH_PAGE } from '../../../routes/paths';
-//
-// import { varFadeInUp, MotionInView } from '../../animate';
 
 // ----------------------------------------------------------------------
 
@@ -84,65 +78,31 @@ const Donate = () => {
 		0.48
 	)}`;
 
-	// const screenLeftAnimate = variantScreenLeft;
-	// const screenCenterAnimate = variantScreenCenter;
-	// const screenRightAnimate = variantScreenRight;
-
 	return (
 		<RootStyle>
 			<Container maxWidth='lg'>
 				<Grid container spacing={5} justifyContent='center'>
-					<Grid
-						item
-						xs={12}
-						md={4}
-						sx={{ display: 'flex', alignItems: 'center' }}>
+					<Grid item xs={12} md={4} sx={{ display: 'flex', alignItems: 'center' }}>
 						<ContentStyle>
 							{/* <MotionInView variants={varFadeInUp}> */}
-							{/* <Typography
-								component='p'
-								variant='overline'
-								sx={{ mb: 2, color: 'info.darker' }}>
-								Get Involved
-							</Typography> */}
-							{/* </MotionInView> */}
-
-							{/* <MotionInView variants={varFadeInUp}> */}
-							<Typography sx={{ color: 'info.main', fontSize: 50 }}>
-								Take{' '}
-								<Typography
-									variant='span'
-									sx={{ fontSize: 70, color: 'info.dark' }}>
-									Action
-								</Typography>
+							<Typography variant="h2" sx={{ mb: 3 }}>
+								Give
 							</Typography>
 							{/* </MotionInView> */}
 
 							{/* <MotionInView variants={varFadeInUp}> */}
-							<Typography
-								sx={{
-									mb: 5,
-									// color: isLight ? 'grey.700' : 'common.white',
-									fontSize: 20,
-								}}>
-								Your support helps make the{' '}
-								<Typography
-									sx={{ fontSize: 22, color: 'info.dark' }}
-									variant='span'>
-									Secure, No Spy, No Censor
-								</Typography>{' '}
-								<em>Social Media Platform</em> a reality.
+							<Typography	sx={{	mb: 5, color: isLight ? 'grey.700' : 'common.white', }}>
+								Your support helps make interactions online more secure
 							</Typography>
 							{/* </MotionInView> */}
 
 							{/* <MotionInView variants={varFadeInUp}> */}
 							<Button
 								size='large'
-								sx={{ backgroundColor: 'info.main' }}
-								// color='inherit'
 								variant='contained'
 								component={RouterLink}
-								to={'/'}>
+								to={'/'}
+							>
 								Donate now
 							</Button>
 							{/* </MotionInView> */}
@@ -151,7 +111,7 @@ const Donate = () => {
 					{/* <Grid item xs={12} md={8} dir='ltr'>
 						<img src={image} alt='image' />
 					</Grid> */}
-					<Grid item xs={6}>
+					<Grid item xs={8} md={6}>
 						{/* <MotionInView variants={varFadeInUp}> */}
 						<Box
 							component='img'

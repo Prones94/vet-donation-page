@@ -17,7 +17,7 @@ const RootStyle = styled("div")(({ theme }) => ({
 
 const ContentStyle = styled((props) => <Stack spacing={5} {...props} />)(({ theme }) => ({
   zIndex: 10,
-  maxWidth: 650,
+  maxWidth: 550,
   border: "none",
   margin: 'auto',
   textAlign: 'center',
@@ -53,17 +53,6 @@ const HeroImgStyle = styled('img')(({ theme }) => ({
 	},
 }));
 
-const ButtonContainerStyle = styled("div")(({ theme }) => ({
-  display: "flex",
-  gap: "1em",
-  [theme.breakpoints.down('sm')]: {
-    justifyContent: "center",
-    flexDirection: "column",
-    alignItems: "center"
-  }
-
-}))
-
 // ----------------------------------------------------------------------
 
 const Hero = () => {
@@ -71,6 +60,7 @@ const Hero = () => {
 		<>
 			<RootStyle initial='initial' animate='animate'>
 				<HeroOverlayStyle alt='overlay' src='/static/overlay.svg' />
+        <HeroImgStyle alt="hero" src="/static/home/hero.png" />
 
         {/* Hero Container */}
         <Container maxWidth="lg">
@@ -79,21 +69,28 @@ const Hero = () => {
             <Typography variant="h2" sx={{ color: 'common.white' }}>
               Welcome to <br />
               <Typography component="span" variant="h2" sx={{ color: 'primary.main' }}>
-                Secure Social Media.
+                Secure Social Media
               </Typography>
-              <br /> Join today!
+              <br /> Privacy comes first
             </Typography>
 
             {/* Tagline */}
-              <Typography sx={{ color: 'common.white' }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-              </Typography>
+            <Typography sx={{ color: 'common.white' }}>
+              Secure Social Media is dedicated to being the safest platform in the world. 
+              We don't track or sell data and we never will. It's your data, housed on independent servers. 
+              Let's make it happen with your support.
+            </Typography>
 
             {/* Button Container */}
-            <ButtonContainerStyle>
+            <Stack
+              direction={{ xs: "column", md: "row" }}
+              spacing={1}
+              justifyContent={{ xs: 'center', md: 'flex-start' }}
+              alignItems="center"
+            >
               {/* Donate Button */}
                 <Button
-                  size="medium"
+                  size="large"
                   variant="contained"
                   component={RouterLink}
                   to="/"
@@ -103,15 +100,14 @@ const Hero = () => {
               <br />
               {/* Invest Button */}
                 <Button
-                  size="medium"
-                  variant="contained"
+                  size="large"
+                  variant="outlined"
                   component={RouterLink}
                   to="/"
                 >
                   Invest Here     
               </Button>
-            </ButtonContainerStyle>
-            
+            </Stack>
           </ContentStyle>
         </Container>
       </RootStyle>

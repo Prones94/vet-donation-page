@@ -54,34 +54,23 @@ const Invest = () => {
 
 					<Grid item xs={12} md={6} lg={5}>
 						{/* <MotionInView variants={varFadeInRight}> */}
-						<Typography variant='h2' sx={{ mb: 3 }}>
-							Invest in our product
+						<Typography variant="h2" sx={{ mb: 3 }}>
+							Join
 						</Typography>
 						{/* </MotionInView> */}
 
 						{/* <MotionInView variants={varFadeInRight}> */}
-						<Typography
-							sx={{
-								color: (theme) =>
-									theme.palette.mode === 'light'
-										? 'text.secondary'
-										: 'common.white',
-							}}>
-							Our theme is the most advanced and user-friendly theme you will
-							find on the market, we have documentation and video to help set
-							your site really easily, pre-installed demos you can import in one
-							click and everything from the theme options to page content can be
-							edited from the front-end. This is the theme you are looking for.
+						<Typography	sx={{	mb: 5, color: isLight ? 'grey.700' : 'common.white', }}>
+							TBD
 						</Typography>
 						{/* </MotionInView> */}
 
 						{/* <MotionInView variants={varFadeInRight}> */}
 						<Button
-							variant='outlined'
-							color='inherit'
 							size='large'
-							sx={{ marginTop: 4, fontWeight: 'bold' }}
-							// endIcon={<Icon icon={roundArrowRightAlt} width={24} height={24} />}
+							variant='contained'
+							component={RouterLink}
+							to={'/'}
 						>
 							Invest Now
 						</Button>

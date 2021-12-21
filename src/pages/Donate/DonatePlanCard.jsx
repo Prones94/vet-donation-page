@@ -116,6 +116,7 @@ const DonatePlanCard = ({ card }) => {
         size="large"
         variant="contained"
         disabled={isAuth}
+        onClick={ submitToCheckout }
         // component={RouterLink}
       >
         Select Amount
