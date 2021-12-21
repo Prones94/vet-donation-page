@@ -86,9 +86,9 @@ const ResponsiveAppBar = () => {
                 <Button>
                   <Link href="/" sx={{ color: 'inherit', textDecoration: 'none' }}>invest</Link>
                 </Button>
-                <Button>
+                {/* <Button>
                   <Link href="/" sx={{ color: 'inherit', textDecoration: 'none' }}>contact</Link>
-                </Button>
+                </Button> */}
                 <Button>
                   <Link href="/" sx={{ color: 'inherit', textDecoration: 'none' }}>Login</Link>
                 </Button>
@@ -123,9 +123,9 @@ const ResponsiveAppBar = () => {
             <Button>
               <Link href="/invest" sx={{ color: 'white', textDecoration: 'none' }}>invest</Link>
             </Button>
-            <Button>
+           {/*  <Button>
               <Link href="/contact" sx={{ color: 'white', textDecoration: 'none' }}>contact</Link>
-            </Button>
+            </Button> */}
             <Button>
               <Link href="/login" sx={{ color: 'white', textDecoration: 'none' }}>Login</Link>
             </Button>
