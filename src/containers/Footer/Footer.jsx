@@ -16,10 +16,6 @@ import {
 	IconButton,
 	Stack,
 } from '@mui/material';
-// routes
-// import { PATH_PAGE } from '../../routes/paths';
-//
-// import Logo from '../../components/Logo';
 import Logo from '../../components/Logo';
 
 // ----------------------------------------------------------------------
@@ -78,12 +74,12 @@ const Footer = () => {
 						</ScrollLink>
 					</Grid>
 					<Grid item xs={8} md={3}>
-						<Typography variant='body2' sx={{ pr: { md: 5 } }}>
+						{/* <Typography variant='body2' sx={{ pr: { md: 5 } }}>
 							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi
 							possimus tenetur at laborum dicta accusantium, tempore error eos
 							expedita earum fugit dolores officiis iusto, perspiciatis hic,
 							facere minima architecto. Iusto.
-						</Typography>
+						</Typography> */}
 
 						<Stack
 							spacing={1.5}

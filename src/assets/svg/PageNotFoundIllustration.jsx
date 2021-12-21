@@ -4,7 +4,7 @@ import { Box } from "@mui/material";
 
 // ----------------------------------------------------------------------
 
-function PageNotFoundIllustration({ ...other }) {
+const PageNotFoundIllustration = ({ ...other }) => {
   const theme = useTheme();
   const PRIMARY_MAIN = theme.palette.primary.main;
   const PRIMARY_DARKER = theme.palette.primary.darker;
