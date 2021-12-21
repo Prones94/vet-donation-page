@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Donate, Hero, Invest } from './';
 
 const Landing = () => {

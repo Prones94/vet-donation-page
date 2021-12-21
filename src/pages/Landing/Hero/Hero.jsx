@@ -1,8 +1,6 @@
-import { Box, Button, Container, Stack, Typography } from '@mui/material';
+import { Button, Container, Stack, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { Link as RouterLink } from 'react-router-dom';
-import flashFill from '@iconify/icons-eva/flash-fill';
-import { Icon } from '@iconify/react';
 
 const RootStyle = styled("div")(({ theme }) => ({
   position: 'relative',
