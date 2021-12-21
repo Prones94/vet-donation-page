@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Header, Footer } from './containers';
-import { Landing, Register, Invest, Login } from './pages';
+import { Landing, Register, Login, Invest, Donate } from './pages';
 import { userAuth } from './context';
 import { ApolloProvider } from '@apollo/client';
 
