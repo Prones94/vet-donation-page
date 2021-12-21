@@ -2,14 +2,16 @@ import React from 'react'
 import { AppBar, Toolbar } from '@mui/material'
 import { MenuDropDown } from './MenuDropDown/MenuDropDown'
 import { HeaderText } from './Header.styles'
+import Navbar from './Navbar/Navbar'
 
 const Header = () => {
   return (
     <AppBar position="static">
-      <Toolbar>
-        <MenuDropDown />
+      {/* <Toolbar>
+        {<MenuDropDown />}
         <HeaderText>Secure Social Media</HeaderText>
-      </Toolbar>
+      </Toolbar> */}
+      <Navbar/>
     </AppBar>
   )
 }
