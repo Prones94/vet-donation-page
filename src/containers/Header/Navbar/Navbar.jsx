@@ -78,14 +78,26 @@ const ResponsiveAppBar = () => {
                 flexDirection: 'column',
                 minWidth: '91vw',
               }}>
-                <Button>
-                  <Link href="/" sx={{ color: 'inherit', textDecoration: 'none' }}>Home</Link>
+                <Button component={RouterLink}
+                  to="/"
+                  sx={{ color: 'inherit', textDecoration: 'none' }}
+                >
+                  Home
+                  {/* <Link href="/" sx={{ color: 'inherit', textDecoration: 'none' }}>Home</Link> */}
                 </Button>
-                <Button>
-                  <Link href="/" sx={{ color: 'inherit', textDecoration: 'none' }}>Donate</Link>
+                <Button component={RouterLink}
+                  to="/donate"
+                  sx={{ color: 'inherit', textDecoration: 'none' }}
+                >
+                  Donate
+                  {/* <Link href="/" sx={{ color: 'inherit', textDecoration: 'none' }}>Donate</Link> */}
                 </Button>
-                <Button>
-                  <Link href="/" sx={{ color: 'inherit', textDecoration: 'none' }}>Invest</Link>
+                <Button component={RouterLink}
+                  to="/invest"
+                  sx={{ color: 'inherit', textDecoration: 'none' }}
+                >
+                  Invest
+                  {/* <Link href="/" sx={{ color: 'inherit', textDecoration: 'none' }}>Invest</Link> */}
                 </Button>
                 {/* <Button>
                   <Link href="/" sx={{ color: 'inherit', textDecoration: 'none' }}>contact</Link>
@@ -120,16 +132,28 @@ const ResponsiveAppBar = () => {
             marginRight: '1em',
             display: { xs: 'none', md: 'flex' }
           }}>
-            <Button>
-              <Link href="/" sx={{ color: 'white', textDecoration: 'none' }}>Home</Link>
+            <Button component={RouterLink}
+              to="/"
+              sx={{ color: 'inherit', textDecoration: 'none' }}
+            >
+              Home
+              {/* <Link href="/" sx={{ color: 'inherit', textDecoration: 'none' }}>Home</Link> */}
             </Button>
-            <Button>
-              <Link href="/donate" sx={{ color: 'white', textDecoration: 'none' }}>Donate</Link>
+            <Button component={RouterLink}
+              to="/donate"
+              sx={{ color: 'inherit', textDecoration: 'none' }}
+            >
+              Donate
+              {/* <Link href="/" sx={{ color: 'inherit', textDecoration: 'none' }}>Donate</Link> */}
             </Button>
-            <Button>
-              <Link href="/invest" sx={{ color: 'white', textDecoration: 'none' }}>Invest</Link>
+            <Button component={RouterLink}
+              to="/invest"
+              sx={{ color: 'inherit', textDecoration: 'none' }}
+            >
+              Invest
+              {/* <Link href="/" sx={{ color: 'inherit', textDecoration: 'none' }}>Invest</Link> */}
             </Button>
-           {/*  <Button>
+            {/*  <Button>
               <Link href="/contact" sx={{ color: 'white', textDecoration: 'none' }}>contact</Link>
             </Button> */}
             <Button
