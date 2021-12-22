@@ -9,7 +9,7 @@ const RootStyle = styled("div")(({ theme }) => ({
     top: 0,
     left: 0,
     width: '100%',
-    height: '100vh',
+    minHeight: '100vh',
     display: 'flex',
     alignItems: 'center'
   }
@@ -17,7 +17,7 @@ const RootStyle = styled("div")(({ theme }) => ({
 
 const ContentStyle = styled((props) => <Stack spacing={5} {...props} />)(({ theme }) => ({
   zIndex: 10,
-  maxWidth: 550,
+  maxWidth: 645,
   border: "none",
   margin: 'auto',
   textAlign: 'center',
@@ -38,20 +38,20 @@ const HeroOverlayStyle = styled('img')({
 	position: 'absolute',
 });
 
-const HeroImgStyle = styled('img')(({ theme }) => ({
-	top: 0,
-	right: 0,
-	bottom: 0,
-	zIndex: 8,
-	width: '100%',
-	margin: 'auto',
-	position: 'absolute',
-	[theme.breakpoints.up('lg')]: {
-		right: '8%',
-		width: 'auto',
-		height: '48vh',
-	},
-}));
+// const HeroImgStyle = styled('img')(({ theme }) => ({
+// 	top: 0,
+// 	right: 0,
+// 	bottom: 0,
+// 	zIndex: 8,
+// 	width: '100%',
+// 	margin: 'auto',
+// 	position: 'absolute',
+// 	[theme.breakpoints.up('lg')]: {
+// 		right: '8%',
+// 		width: 'auto',
+// 		height: '48vh',
+// 	},
+// }));
 
 // ----------------------------------------------------------------------
 
@@ -60,7 +60,7 @@ const Hero = () => {
 		<>
 			<RootStyle initial='initial' animate='animate'>
 				<HeroOverlayStyle alt='overlay' src='/static/overlay.svg' />
-        <HeroImgStyle alt="hero" src="/static/home/hero.png" />
+        {/* <HeroImgStyle alt="hero" src="/static/home/hero.png" /> */}
 
         {/* Hero Container */}
         <Container maxWidth="lg">
@@ -69,9 +69,9 @@ const Hero = () => {
             <Typography variant="h2" sx={{ color: 'common.white' }}>
               Welcome to <br />
               <Typography component="span" variant="h2" sx={{ color: 'primary.main' }}>
-                Secure Social Media
+                Secure Social Media!
               </Typography>
-              <br /> Privacy comes first
+              <br /> Privacy comes first.
             </Typography>
 
             {/* Tagline */}
@@ -84,7 +84,7 @@ const Hero = () => {
             {/* Button Container */}
             <Stack
               direction={{ xs: "column", md: "row" }}
-              spacing={1}
+              spacing={{ xs: 1, md: 4 }}
               justifyContent={{ xs: 'center', md: 'flex-start' }}
               alignItems="center"
             >
