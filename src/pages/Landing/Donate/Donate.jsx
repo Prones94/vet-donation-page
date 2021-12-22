@@ -6,6 +6,7 @@ import { Link as RouterLink } from 'react-router-dom';
 
 const RootStyle = styled('div')(({ theme }) => ({
 	padding: theme.spacing(24, 0),
+	minHeight: '80vh',
 	backgroundImage:
 		theme.palette.mode === 'light'
 			? `linear-gradient(180deg, ${alpha(theme.palette.grey[300], 0)} 0%, ${

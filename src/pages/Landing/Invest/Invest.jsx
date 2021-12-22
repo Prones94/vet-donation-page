@@ -5,6 +5,7 @@ import { Box, Grid, Button, Container, Typography } from '@mui/material';
 
 const RootStyle = styled('div')(({ theme }) => ({
 	textAlign: 'center',
+	minHeight: '80vh',
 	paddingTop: theme.spacing(20),
 	paddingBottom: theme.spacing(10),
 	[theme.breakpoints.up('md')]: {

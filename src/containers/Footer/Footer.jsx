@@ -6,6 +6,7 @@ import linkedinFill from '@iconify/icons-eva/linkedin-fill';
 import { Link as ScrollLink } from 'react-scroll';
 import { Link as RouterLink } from 'react-router-dom';
 // material
+import SyncLockIcon from '@mui/icons-material/SyncLock';
 import { styled } from '@mui/material/styles';
 import {
 	Grid,
@@ -16,7 +17,6 @@ import {
 	IconButton,
 	Stack,
 } from '@mui/material';
-import Logo from '../../components/Logo';
 
 // ----------------------------------------------------------------------
 
@@ -70,16 +70,14 @@ const Footer = () => {
 					sx={{ textAlign: { xs: 'center', md: 'left' } }}>
 					<Grid item xs={12} sx={{ mb: 3 }}>
 						<ScrollLink to='move_top' spy smooth>
-							<Logo sx={{ mx: { xs: 'auto', md: 'inherit' } }} />
+							<SyncLockIcon sx={{ color: 'primary.light', fontSize: '2em', marginRight: '.5em' }} />
+							{/* <Logo sx={{ mx: { xs: 'auto', md: 'inherit' } }} /> */}
 						</ScrollLink>
 					</Grid>
 					<Grid item xs={8} md={3}>
-						{/* <Typography variant='body2' sx={{ pr: { md: 5 } }}>
-							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi
-							possimus tenetur at laborum dicta accusantium, tempore error eos
-							expedita earum fugit dolores officiis iusto, perspiciatis hic,
-							facere minima architecto. Iusto.
-						</Typography> */}
+						<Typography variant='body1' sx={{ pr: { md: 5 } }}>
+							Secure Social Media is dedicated to being the safest platform in the world. 
+						</Typography>
 
 						<Stack
 							spacing={1.5}
@@ -103,7 +101,7 @@ const Footer = () => {
 								const { headline, children } = list;
 								return (
 									<Stack key={headline} spacing={2}>
-										<Typography component='p' variant='overline'>
+										<Typography component='p' variant='overline' sx={{ color: 'primary.main' }}>
 											{headline}
 										</Typography>
 										{children.map((link) => (

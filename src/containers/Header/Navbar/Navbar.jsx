@@ -10,6 +10,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import { Link } from '@mui/material';
+import { Link as RouterLink } from 'react-router-dom'
 
 // const pages = ['Products', 'Pricing', 'Blog'];
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -78,23 +79,28 @@ const ResponsiveAppBar = () => {
                 minWidth: '91vw',
               }}>
                 <Button>
-                  <Link href="/" sx={{ color: 'inherit', textDecoration: 'none' }}>home</Link>
+                  <Link href="/" sx={{ color: 'inherit', textDecoration: 'none' }}>Home</Link>
                 </Button>
                 <Button>
-                  <Link href="/" sx={{ color: 'inherit', textDecoration: 'none' }}>donate</Link>
+                  <Link href="/" sx={{ color: 'inherit', textDecoration: 'none' }}>Donate</Link>
                 </Button>
                 <Button>
-                  <Link href="/" sx={{ color: 'inherit', textDecoration: 'none' }}>invest</Link>
+                  <Link href="/" sx={{ color: 'inherit', textDecoration: 'none' }}>Invest</Link>
                 </Button>
                 {/* <Button>
                   <Link href="/" sx={{ color: 'inherit', textDecoration: 'none' }}>contact</Link>
                 </Button> */}
-                <Button>
-                  <Link href="/" sx={{ color: 'inherit', textDecoration: 'none' }}>Login</Link>
+                <Button
+                  variant="contained"
+                  component={RouterLink}
+                  to="/login"
+                >
+                  Login
+                  {/* <Link href="/" sx={{ color: 'inherit', textDecoration: 'none' }}>Login</Link> */}
                 </Button>
-                <Button>
+                {/* <Button>
                   <Link href="/" sx={{ color: 'inherit', textDecoration: 'none' }}>Logout</Link>
-                </Button>
+                </Button> */}
               </Box>
             </Menu>
           </Box>
@@ -115,23 +121,27 @@ const ResponsiveAppBar = () => {
             display: { xs: 'none', md: 'flex' }
           }}>
             <Button>
-              <Link href="/" sx={{ color: 'white', textDecoration: 'none' }}>home</Link>
+              <Link href="/" sx={{ color: 'white', textDecoration: 'none' }}>Home</Link>
             </Button>
             <Button>
-              <Link href="/donate" sx={{ color: 'white', textDecoration: 'none' }}>donate</Link>
+              <Link href="/donate" sx={{ color: 'white', textDecoration: 'none' }}>Donate</Link>
             </Button>
             <Button>
-              <Link href="/invest" sx={{ color: 'white', textDecoration: 'none' }}>invest</Link>
+              <Link href="/invest" sx={{ color: 'white', textDecoration: 'none' }}>Invest</Link>
             </Button>
            {/*  <Button>
               <Link href="/contact" sx={{ color: 'white', textDecoration: 'none' }}>contact</Link>
             </Button> */}
-            <Button>
-              <Link href="/login" sx={{ color: 'white', textDecoration: 'none' }}>Login</Link>
+            <Button
+              variant="contained"
+              component={RouterLink}
+              to="/login"
+            >
+              Login
             </Button>
-            <Button>
+            {/* <Button>
               <Link href="/" sx={{ color: 'white', textDecoration: 'none' }}>Logout</Link>
-            </Button>
+            </Button> */}
           </Box>
         </Toolbar>
       </Container>
