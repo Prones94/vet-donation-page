@@ -7,8 +7,7 @@ import { plans } from './plans';
 
 const RootStyle = styled('div')(({ theme }) => ({
 	minHeight: '100%',
-	paddingTop: theme.spacing(15),
-	paddingBottom: theme.spacing(10),
+	padding: theme.spacing(2),
 }));
 
 // ----------------------------------------------------------------------
@@ -35,16 +34,16 @@ const Invest = () => {
 					</Box>
 				)}
 
-        <Grid container spacing={3} sx={{ mt: 1 }}>
-          { plans?.map((card) => (
-            <Grid item xs={12} md={4} key={card.payment}>
-              <InvestPlanCard card={card} />
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
-    </RootStyle>
-  );
+				<Grid container spacing={3} sx={{ mt: 1 }}>
+					{plans?.map((card) => (
+						<Grid item xs={12} md={4} key={card.payment}>
+							<InvestPlanCard card={card} />
+						</Grid>
+					))}
+				</Grid>
+			</Container>
+		</RootStyle>
+	);
 };
 
 export { Invest };
