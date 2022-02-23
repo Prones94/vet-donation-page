@@ -9,7 +9,7 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
-import { Link } from '@mui/material';
+// import { Link } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom'
 
 // const pages = ['Products', 'Pricing', 'Blog'];
@@ -39,7 +39,7 @@ const ResponsiveAppBar = () => {
               sx={{ mr: 2, display: { xs: 'none', md: 'flex', fontWeight: 'bold', alignItems: 'center' } }}
             >
               <SyncLockIcon sx={{ color: 'primary.light', fontSize: '2em', marginRight: '.5em' }} />
-              Secure Social Media
+              Drew's Vet Project
             </Typography>
           </Box>
 
@@ -123,7 +123,7 @@ const ResponsiveAppBar = () => {
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
           >
             <SyncLockIcon sx={{ color: 'primary.light', fontSize: '2em', marginRight: '.5em' }} />
-            Secure Social Media
+            Drew's Vet Project
           </Typography>
           <Box sx={{
             flexGrow: 1,

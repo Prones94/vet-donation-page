@@ -93,7 +93,7 @@ const Features = () => {
             features
           </Typography>
           <Typography variant="h3" sx={{ mb: 3 }}>
-            Secure Social Media best features
+            The best features on the page!
           </Typography>
         </Box>
         <Grid container spacing={5}>

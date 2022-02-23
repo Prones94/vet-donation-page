@@ -69,16 +69,16 @@ const Hero = () => {
             <Typography variant="h2" sx={{ color: 'common.white' }}>
               Welcome to <br />
               <Typography component="span" variant="h2" sx={{ color: 'primary.main' }}>
-                Secure Social Media!
+                Drew's Vet Project!
               </Typography>
               <br /> Privacy comes first.
             </Typography>
 
             {/* Tagline */}
             <Typography sx={{ color: 'common.white' }}>
-              Secure Social Media is dedicated to being the safest platform in the world. 
-              We don't track or sell data and we never will. It's your data, housed on independent servers. 
-              Let's make it happen with your support.
+              This project is dedicated to the veterans from all our military branches and how we can support them.
+              We don't track or sell data and we never will. This is to help our military members get the help they need.
+              Let's make this happen with your support.
             </Typography>
 
             {/* Button Container */}
@@ -105,7 +105,7 @@ const Hero = () => {
                   component={RouterLink}
                   to="/"
                 >
-                  Invest Here     
+                  Invest Here
               </Button>
             </Stack>
           </ContentStyle>

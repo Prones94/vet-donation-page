@@ -29,28 +29,28 @@ const GREY = {
 };
 
 const PRIMARY = {
-  lighter: '#C8FACD',
-  light: '#5BE584',
-  main: '#00AB55',
-  dark: '#007B55',
-  darker: '#005249',
-  contrastText: '#fff'
+  lighter: '#d9E4f2',
+  light: '#8dAFD8',
+  main: '#4079BC',
+  dark: '#274972',
+  darker: '#0D1826',
+  contrastText: '#FFF'
 };
 const SECONDARY = {
-  lighter: '#D6E4FF',
-  light: '#84A9FF',
-  main: '#3366FF',
-  dark: '#1939B7',
-  darker: '#091A7A',
-  contrastText: '#fff'
+  lighter: '#DEFCEA',
+  light: '#9fc6c0',
+  main: '#70A9A1',
+  dark: '#39605a',
+  darker: '#13201E',
+  contrastText: '#FFF'
 };
 const INFO = {
-  lighter: '#D0F2FF',
-  light: '#74CAFF',
-  main: '#1890FF',
-  dark: '#0C53B7',
-  darker: '#04297A',
-  contrastText: '#fff'
+  lighter: '#D0DFFB',
+  light: '#729FF3',
+  main: '#548af0',
+  dark: '#0C398D',
+  darker: '#04132F',
+  contrastText: '#FFF'
 };
 const SUCCESS = {
   lighter: '#E9FCD4',
@@ -74,7 +74,7 @@ const ERROR = {
   main: '#FF4842',
   dark: '#B72136',
   darker: '#7A0C2E',
-  contrastText: '#fff'
+  contrastText: '#FFF'
 };
 
 const GRADIENTS = {

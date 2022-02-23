@@ -76,7 +76,7 @@ const Footer = () => {
 					</Grid>
 					<Grid item xs={8} md={3}>
 						<Typography variant='body1' sx={{ pr: { md: 5 } }}>
-							Secure Social Media is dedicated to being the safest platform in the world. 
+							Drew's Vet Project is dedicated to the military members stationed around the world fighting for our homes.
 						</Typography>
 
 						<Stack
@@ -132,7 +132,7 @@ const Footer = () => {
 						fontSize: 13,
 						textAlign: { xs: 'center', md: 'center' },
 					}}>
-					© 2021 Secure Social Media, LLC. All rights reserved
+					© 2022 Drw's Vet Project, LLC. All rights reserved
 				</Typography>
 			</Container>
 		</RootStyle>
