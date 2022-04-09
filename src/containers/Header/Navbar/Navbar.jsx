@@ -39,7 +39,7 @@ const ResponsiveAppBar = () => {
               sx={{ mr: 2, display: { xs: 'none', md: 'flex', fontWeight: 'bold', alignItems: 'center' } }}
             >
               <SyncLockIcon sx={{ color: 'primary.light', fontSize: '2em', marginRight: '.5em' }} />
-              Drew's Vet Project
+              XXII 2 MANY
             </Typography>
           </Box>
 
@@ -123,7 +123,7 @@ const ResponsiveAppBar = () => {
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
           >
             <SyncLockIcon sx={{ color: 'primary.light', fontSize: '2em', marginRight: '.5em' }} />
-            Drew's Vet Project
+            XXII2MANY
           </Typography>
           <Box sx={{
             flexGrow: 1,

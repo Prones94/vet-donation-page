@@ -76,7 +76,7 @@ const Footer = () => {
 					</Grid>
 					<Grid item xs={8} md={3}>
 						<Typography variant='body1' sx={{ pr: { md: 5 } }}>
-							Drew's Vet Project is dedicated to the military members stationed around the world fighting for our homes.
+							XXII2MANY is dedicated to the military members stationed around the world fighting for our homes.
 						</Typography>
 
 						<Stack

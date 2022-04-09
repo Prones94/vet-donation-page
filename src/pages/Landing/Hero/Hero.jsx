@@ -66,12 +66,12 @@ const Hero = () => {
         <Container maxWidth="lg">
           <ContentStyle>
             {/* Header */}
-            <Typography variant="h2" sx={{ color: 'common.white' }}>
+            <Typography variant="h3" sx={{ color: 'common.white' }}>
               Welcome to <br />
-              <Typography component="span" variant="h2" sx={{ color: 'primary.main' }}>
-                Drew's Vet Project!
+              <Typography component="span" variant="h1" sx={{ color: 'primary.main' }}>
+                XXII2MANY
               </Typography>
-              <br /> Privacy comes first.
+              <br /> we are stronger together
             </Typography>
 
             {/* Tagline */}

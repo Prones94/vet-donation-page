@@ -9,7 +9,7 @@ const Header = () => {
     <AppBar position="static">
       {/* <Toolbar>
         {<MenuDropDown />}
-        <HeaderText>Drew's Vet Project</HeaderText>
+        <HeaderText>XXII2MANY</HeaderText>
       </Toolbar> */}
       <Navbar/>
     </AppBar>
