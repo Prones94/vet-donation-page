@@ -36,10 +36,10 @@ const ResponsiveAppBar = () => {
               variant="h5"
               noWrap
               component="div"
-              sx={{ mr: 2, display: { xs: 'none', md: 'flex', fontWeight: 'bold', alignItems: 'center' } }}
+              sx={{ mr: 2, display: { xs: 'none', md: 'flex', fontWeight: 'bold', alignItems: 'center' }, color: 'primary.main' }}
             >
-              <SyncLockIcon sx={{ color: 'primary.light', fontSize: '2em', marginRight: '.5em' }} />
-              XXII 2 MANY
+              <SyncLockIcon sx={{ color: 'primary.main', fontSize: '2em', marginRight: '.5em' }} />
+              XXII2MANY
             </Typography>
           </Box>
 

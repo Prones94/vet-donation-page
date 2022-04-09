@@ -71,7 +71,9 @@ const Hero = () => {
               <Typography component="span" variant="h1" sx={{ color: 'primary.main' }}>
                 XXII2MANY
               </Typography>
-              <br /> we are stronger together
+              <br />
+              <Typography variant="h3" sx={{color: 'secondary.main' }}>we are stronger together
+              </Typography>
             </Typography>
 
             {/* Tagline */}
