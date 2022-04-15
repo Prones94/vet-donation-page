@@ -7,8 +7,8 @@ import MilFirstLogo from '../../../components/images/Military-First-Image.png'
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({
-	padding: theme.spacing(24, 0),
-	minHeight: '80vh',
+	padding: theme.spacing(12, 0),
+	minHeight: '67vh',
 	backgroundImage:
 		theme.palette.mode === 'light'
 			? `linear-gradient(180deg, ${alpha(theme.palette.grey[300], 0)} 0%, ${

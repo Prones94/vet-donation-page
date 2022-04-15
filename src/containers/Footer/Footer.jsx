@@ -70,7 +70,6 @@ const Footer = () => {
 					sx={{ textAlign: { xs: 'center', md: 'left' } }}>
 					<Grid item xs={12} sx={{ mb: 3 }}>
 						<ScrollLink to='move_top' spy smooth>
-							<SyncLockIcon sx={{ color: 'primary.light', fontSize: '2em', marginRight: '.5em' }} />
 							{/* <Logo sx={{ mx: { xs: 'auto', md: 'inherit' } }} /> */}
 						</ScrollLink>
 					</Grid>

@@ -2,6 +2,9 @@ import { Button, Container, Stack, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { Link as RouterLink } from 'react-router-dom';
 
+import FinalLogo from '../../../components/images/XXIIFull.png'
+
+
 
 const RootStyle = styled("div")(({ theme }) => ({
   position: 'relative',
@@ -10,10 +13,10 @@ const RootStyle = styled("div")(({ theme }) => ({
     top: 0,
     left: 0,
     width: '100%',
-    minHeight: '100vh',
+    minHeight: '70vh',
     display: 'flex',
     alignItems: 'center'
-  }
+  },
 }));
 
 const ContentStyle = styled((props) => <Stack spacing={5} {...props} />)(({ theme }) => ({
@@ -40,18 +43,18 @@ const HeroOverlayStyle = styled('img')({
 });
 
 const HeroImgStyle = styled('img')(({ theme }) => ({
-	top: 0,
-	right: 0,
-	bottom: 0,
-	zIndex: 8,
-	width: '100%',
-	margin: 'auto',
-	position: 'absolute',
-	[theme.breakpoints.up('lg')]: {
-		right: '8%',
-		width: 'auto',
-		height: '48vh',
-	},
+  top: 0,
+  right: 0,
+  bottom: 0,
+  zIndex: 8,
+  width: '100%',
+  margin: 'auto',
+  position: 'absolute',
+  [theme.breakpoints.up('lg')]: {
+    right: '8%',
+    width: 'auto',
+    height: '48vh',
+  },
 }));
 
 // ----------------------------------------------------------------------
@@ -70,13 +73,13 @@ const Hero = () => {
             <Typography variant="h3" sx={{ color: 'common.white' }}>
               Welcome to <br />
               <Typography component="span" variant="h1" sx={{
-                color: 'hsla(45, 48%, 61%, 1)'
-                // , background: 'linear - gradient(90deg, hsla(45, 48%, 61%, 1) 32 %, hsla(45, 94%, 81%, 1) 50%, hsla(45, 48 %, 61%, 1) 68%)', background: '-moz - linear - gradient(90deg, hsla(45, 48%, 61%, 1) 32 %, hsla(45, 94%, 81%, 1) 50%, hsla(45, 48%, 61%, 1) 68%)',
-                // background: ' -webkit - linear - gradient(90deg, hsla(45, 48%, 61%, 1) 32%, hsla(45, 94%, 81%, 1) 50%, hsla(45, 48%, 61%, 1) 68%)'
+                color: 'hsla(45, 48%, 61%, 1)',
+                marginTop: '8px', marginBottom: '8px'
               }}>
-                XXII2MANY
+                <img src={FinalLogo} alt='XXII 2 Many Logo' />
+
               </Typography>
-              <br />
+              {/* <br /> */}
               <Typography variant="h3" sx={{ color: 'secondary.main' }}>we are stronger together
                 <br />
                 <Typography variant="h3" sx={{ color: 'common.white' }}>Donation Page</Typography>
@@ -107,15 +110,6 @@ const Hero = () => {
                 Donate Here
               </Button>
               <br />
-              {/* Invest Button */}
-              <Button
-                size="large"
-                variant="outlined"
-                component={RouterLink}
-                to="/"
-              >
-                Invest Here
-              </Button>
             </Stack>
           </ContentStyle>
         </Container>

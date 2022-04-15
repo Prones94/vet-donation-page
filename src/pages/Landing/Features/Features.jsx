@@ -29,8 +29,8 @@ const PLANS = [...Array(3)].map((_, index) => ({
   commons: ["One end products", "12 months updates", "6 months of support"],
 }));
 const RootStyle = styled("div")(({ theme }) => ({
-  paddingTop: theme.spacing(15),
-  minHeight: '100vh',
+  paddingTop: theme.spacing(10),
+  minHeight: '70vh',
   display: 'flex',
   alignItems: 'center',
   [theme.breakpoints.up("md")]: {
@@ -95,7 +95,7 @@ const Features = () => {
         {/* <HeroOverlayStyle alt='overlay' src='/static/overlay.svg' /> */}
       <Container maxWidth="lg">
 
-        <Box sx={{ mb: 10, textAlign: "center" }}>
+        <Box sx={{ mb: 2, textAlign: "center", paddingTop: '20px' }}>
           <Typography
             component="p"
             variant="overline"
