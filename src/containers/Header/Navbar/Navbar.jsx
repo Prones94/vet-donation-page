@@ -12,6 +12,9 @@ import Button from '@mui/material/Button';
 // import { Link } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom'
 
+import HeroLogo from '../../../components/images/XXII_main.png'
+
+
 // const pages = ['Products', 'Pricing', 'Blog'];
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
@@ -28,7 +31,7 @@ const ResponsiveAppBar = () => {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: 'grey.900' }}>
+    <AppBar position="static" sx={{ backgroundColor: '#333333' }}>
       <Container maxWidth="lg">
         <Toolbar disableGutters>
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
@@ -36,10 +39,13 @@ const ResponsiveAppBar = () => {
               variant="h5"
               noWrap
               component="div"
-              sx={{ mr: 2, display: { xs: 'none', md: 'flex', fontWeight: 'bold', alignItems: 'center' }, color: 'primary.main' }}
+              sx={{ mr: 2, display: { xs: 'none', md: 'flex', fontWeight: 'bold', alignItems: 'center' }, color: 'primary.main', width: '50%' }}
+
+
             >
-              <SyncLockIcon sx={{ color: 'primary.main', fontSize: '2em', marginRight: '.5em' }} />
-              XXII2MANY
+            <img src={HeroLogo} alt='Hero Logo' />
+              {/* <SyncLockIcon sx={{ color: 'primary.main', fontSize: '2em', marginRight: '.5em' }} /> */}
+
             </Typography>
           </Box>
 
@@ -105,9 +111,9 @@ const ResponsiveAppBar = () => {
                 <Button
                   variant="contained"
                   component={RouterLink}
-                  to="/login"
+                  to="/donate"
                 >
-                  Login
+                  Donate
                   {/* <Link href="/" sx={{ color: 'inherit', textDecoration: 'none' }}>Login</Link> */}
                 </Button>
                 {/* <Button>
@@ -122,7 +128,7 @@ const ResponsiveAppBar = () => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
           >
-            <SyncLockIcon sx={{ color: 'primary.light', fontSize: '2em', marginRight: '.5em' }} />
+            {/* <SyncLockIcon sx={{ color: 'primary.light', fontSize: '2em', marginRight: '.5em' }} /> */}
             XXII2MANY
           </Typography>
           <Box sx={{
@@ -139,29 +145,12 @@ const ResponsiveAppBar = () => {
               Home
               {/* <Link href="/" sx={{ color: 'inherit', textDecoration: 'none' }}>Home</Link> */}
             </Button>
-            <Button component={RouterLink}
-              to="/donate"
-              sx={{ color: 'inherit', textDecoration: 'none' }}
-            >
-              Donate
-              {/* <Link href="/" sx={{ color: 'inherit', textDecoration: 'none' }}>Donate</Link> */}
-            </Button>
-            <Button component={RouterLink}
-              to="/invest"
-              sx={{ color: 'inherit', textDecoration: 'none' }}
-            >
-              Invest
-              {/* <Link href="/" sx={{ color: 'inherit', textDecoration: 'none' }}>Invest</Link> */}
-            </Button>
-            {/*  <Button>
-              <Link href="/contact" sx={{ color: 'white', textDecoration: 'none' }}>contact</Link>
-            </Button> */}
             <Button
               variant="contained"
               component={RouterLink}
-              to="/login"
+              to="/donate"
             >
-              Login
+              Donate
             </Button>
             {/* <Button>
               <Link href="/" sx={{ color: 'white', textDecoration: 'none' }}>Logout</Link>

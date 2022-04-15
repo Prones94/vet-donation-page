@@ -2,6 +2,8 @@ import { Box, Button, Container, Grid, Typography } from '@mui/material';
 import { alpha, styled, useTheme } from '@mui/material/styles';
 import { Link as RouterLink } from 'react-router-dom';
 
+import MilFirstLogo from '../../../components/images/Military-First-Image.png'
+
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({
@@ -116,7 +118,7 @@ const Donate = () => {
 						{/* <MotionInView variants={varFadeInUp}> */}
 						<Box
 							component='img'
-							src='/static/home/screen_light_1.png'
+							src={MilFirstLogo}
 							sx={{
 								borderRadius: 2,
 								boxShadow: shadow,

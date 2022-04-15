@@ -2,6 +2,7 @@ import { Button, Container, Stack, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { Link as RouterLink } from 'react-router-dom';
 
+
 const RootStyle = styled("div")(({ theme }) => ({
   position: 'relative',
   backgroundColor: theme.palette.grey[400],
@@ -31,36 +32,36 @@ const ContentStyle = styled((props) => <Stack spacing={5} {...props} />)(({ them
 }));
 
 const HeroOverlayStyle = styled('img')({
-	zIndex: 9,
-	width: '100%',
-	height: '100%',
-	objectFit: 'cover',
-	position: 'absolute',
+  zIndex: 9,
+  width: '100%',
+  height: '100%',
+  objectFit: 'cover',
+  position: 'absolute',
 });
 
-// const HeroImgStyle = styled('img')(({ theme }) => ({
-// 	top: 0,
-// 	right: 0,
-// 	bottom: 0,
-// 	zIndex: 8,
-// 	width: '100%',
-// 	margin: 'auto',
-// 	position: 'absolute',
-// 	[theme.breakpoints.up('lg')]: {
-// 		right: '8%',
-// 		width: 'auto',
-// 		height: '48vh',
-// 	},
-// }));
+const HeroImgStyle = styled('img')(({ theme }) => ({
+	top: 0,
+	right: 0,
+	bottom: 0,
+	zIndex: 8,
+	width: '100%',
+	margin: 'auto',
+	position: 'absolute',
+	[theme.breakpoints.up('lg')]: {
+		right: '8%',
+		width: 'auto',
+		height: '48vh',
+	},
+}));
 
 // ----------------------------------------------------------------------
 
 const Hero = () => {
-	return (
-		<>
-			<RootStyle initial='initial' animate='animate'>
-				<HeroOverlayStyle alt='overlay' src='/static/overlay.svg' />
-        {/* <HeroImgStyle alt="hero" src="/static/home/hero.png" /> */}
+  return (
+    <>
+      <RootStyle initial='initial' animate='animate'>
+        <HeroOverlayStyle alt='overlay' src='/static/overlay.svg' />
+        {/* <HeroImgStyle alt="hero" src="{HeroLogo}" /> */}
 
         {/* Hero Container */}
         <Container maxWidth="lg">
@@ -68,11 +69,17 @@ const Hero = () => {
             {/* Header */}
             <Typography variant="h3" sx={{ color: 'common.white' }}>
               Welcome to <br />
-              <Typography component="span" variant="h1" sx={{ color: 'primary.main' }}>
+              <Typography component="span" variant="h1" sx={{
+                color: 'hsla(45, 48%, 61%, 1)'
+                // , background: 'linear - gradient(90deg, hsla(45, 48%, 61%, 1) 32 %, hsla(45, 94%, 81%, 1) 50%, hsla(45, 48 %, 61%, 1) 68%)', background: '-moz - linear - gradient(90deg, hsla(45, 48%, 61%, 1) 32 %, hsla(45, 94%, 81%, 1) 50%, hsla(45, 48%, 61%, 1) 68%)',
+                // background: ' -webkit - linear - gradient(90deg, hsla(45, 48%, 61%, 1) 32%, hsla(45, 94%, 81%, 1) 50%, hsla(45, 48%, 61%, 1) 68%)'
+              }}>
                 XXII2MANY
               </Typography>
               <br />
-              <Typography variant="h3" sx={{color: 'secondary.main' }}>we are stronger together
+              <Typography variant="h3" sx={{ color: 'secondary.main' }}>we are stronger together
+                <br />
+                <Typography variant="h3" sx={{ color: 'common.white' }}>Donation Page</Typography>
               </Typography>
             </Typography>
 
@@ -91,23 +98,23 @@ const Hero = () => {
               alignItems="center"
             >
               {/* Donate Button */}
-                <Button
-                  size="large"
-                  variant="contained"
-                  component={RouterLink}
-                  to="/"
-                >
-                  Donate Here
-                </Button>
+              <Button
+                size="large"
+                variant="contained"
+                component={RouterLink}
+                to="/"
+              >
+                Donate Here
+              </Button>
               <br />
               {/* Invest Button */}
-                <Button
-                  size="large"
-                  variant="outlined"
-                  component={RouterLink}
-                  to="/"
-                >
-                  Invest Here
+              <Button
+                size="large"
+                variant="outlined"
+                component={RouterLink}
+                to="/"
+              >
+                Invest Here
               </Button>
             </Stack>
           </ContentStyle>

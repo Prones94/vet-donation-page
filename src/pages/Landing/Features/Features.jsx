@@ -13,7 +13,7 @@ import {
   Typography
 } from "@mui/material";
 // ----------------------------------------------------------------------
-const LICENSES = ["Security", "Freedom", "Support"];
+const LICENSES = ["Unity", "Freedom", "Support"];
 const options = [
   "One Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print.",
   "Two Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.",
@@ -37,6 +37,13 @@ const RootStyle = styled("div")(({ theme }) => ({
     paddingBottom: theme.spacing(15)
   }
 }));
+const HeroOverlayStyle = styled('img')({
+  zIndex: 9,
+  width: '100%',
+  height: '100%',
+  objectFit: 'cover',
+  position: 'absolute',
+});
 // ----------------------------------------------------------------------
 
 const PlanCard = ({ plan, cardIndex }) => {
@@ -68,7 +75,7 @@ const PlanCard = ({ plan, cardIndex }) => {
         <Stack spacing={5}>
           <Typography>{icons[cardIndex]}</Typography>
           <div>
-            <Typography variant="h5" sx={{marginBottom: '-1em'}}>{license}</Typography>
+            <Typography variant="h5" sx={{ marginBottom: '-1em' }}>{license}</Typography>
           </div>
           <Stack direction="row" justifyContent="flex-end"></Stack>
           <Typography size="large" variant="p">
@@ -83,7 +90,9 @@ const PlanCard = ({ plan, cardIndex }) => {
 const Features = () => {
   return (
     <RootStyle>
+        {/* <HeroOverlayStyle alt='overlay' src='/static/overlay.svg' /> */}
       <Container maxWidth="lg">
+
         <Box sx={{ mb: 10, textAlign: "center" }}>
           <Typography
             component="p"
