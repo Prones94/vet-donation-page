@@ -35,7 +35,9 @@ const RootStyle = styled("div")(({ theme }) => ({
   alignItems: 'center',
   [theme.breakpoints.up("md")]: {
     paddingBottom: theme.spacing(15)
-  }
+  },
+  backgroundColor: '#1a1c21',
+  color: 'white'
 }));
 const HeroOverlayStyle = styled('img')({
   zIndex: 9,

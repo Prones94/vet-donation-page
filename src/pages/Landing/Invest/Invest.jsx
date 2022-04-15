@@ -11,6 +11,7 @@ const RootStyle = styled('div')(({ theme }) => ({
 	[theme.breakpoints.up('md')]: {
 		textAlign: 'left',
 	},
+	backgroundColor: '#f4f6f7'
 }));
 
 const Invest = () => {

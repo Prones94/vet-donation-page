@@ -95,7 +95,7 @@ const Donate = () => {
 
 							{/* <MotionInView variants={varFadeInUp}> */}
 							<Typography	sx={{	mb: 5, color: isLight ? 'grey.700' : 'common.white', }}>
-								Your support helps make interactions online more secure
+								Your support helps all branches of the military, including first responders!
 							</Typography>
 							{/* </MotionInView> */}
 
