@@ -2,11 +2,13 @@ import { Box, Button, Container, Grid, Typography } from '@mui/material';
 import { alpha, styled, useTheme } from '@mui/material/styles';
 import { Link as RouterLink } from 'react-router-dom';
 
+import MilFirstLogo from '../../../components/images/Military-First-Image.png'
+
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({
-	padding: theme.spacing(24, 0),
-	minHeight: '80vh',
+	padding: theme.spacing(12, 0),
+	minHeight: '67vh',
 	backgroundImage:
 		theme.palette.mode === 'light'
 			? `linear-gradient(180deg, ${alpha(theme.palette.grey[300], 0)} 0%, ${
@@ -93,7 +95,7 @@ const Donate = () => {
 
 							{/* <MotionInView variants={varFadeInUp}> */}
 							<Typography	sx={{	mb: 5, color: isLight ? 'grey.700' : 'common.white', }}>
-								Your support helps make interactions online more secure
+								Your support helps all branches of the military, including first responders!
 							</Typography>
 							{/* </MotionInView> */}
 
@@ -116,7 +118,7 @@ const Donate = () => {
 						{/* <MotionInView variants={varFadeInUp}> */}
 						<Box
 							component='img'
-							src='/static/home/screen_light_1.png'
+							src={MilFirstLogo}
 							sx={{
 								borderRadius: 2,
 								boxShadow: shadow,

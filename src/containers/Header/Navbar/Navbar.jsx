@@ -3,7 +3,6 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import SyncLockIcon from '@mui/icons-material/SyncLock';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -11,6 +10,9 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 // import { Link } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom'
+
+import HeroLogo from '../../../components/images/XXII.png'
+
 
 // const pages = ['Products', 'Pricing', 'Blog'];
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -28,7 +30,7 @@ const ResponsiveAppBar = () => {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: 'grey.900' }}>
+    <AppBar position="static" sx={{ backgroundColor: '#333333' }}>
       <Container maxWidth="lg">
         <Toolbar disableGutters>
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
@@ -36,10 +38,13 @@ const ResponsiveAppBar = () => {
               variant="h5"
               noWrap
               component="div"
-              sx={{ mr: 2, display: { xs: 'none', md: 'flex', fontWeight: 'bold', alignItems: 'center' } }}
+              sx={{ mr: 2, display: { xs: 'none', md: 'flex', fontWeight: 'bold', alignItems: 'center' }, color: 'primary.main', width: '45%' }}
+
+
             >
-              <SyncLockIcon sx={{ color: 'primary.light', fontSize: '2em', marginRight: '.5em' }} />
-              Drew's Vet Project
+              <img src={HeroLogo} alt='Hero Logo' />
+              {/* <SyncLockIcon sx={{ color: 'primary.main', fontSize: '2em', marginRight: '.5em' }} /> */}
+
             </Typography>
           </Box>
 
@@ -83,36 +88,32 @@ const ResponsiveAppBar = () => {
                   sx={{ color: 'inherit', textDecoration: 'none' }}
                 >
                   Home
-                  {/* <Link href="/" sx={{ color: 'inherit', textDecoration: 'none' }}>Home</Link> */}
                 </Button>
                 <Button component={RouterLink}
                   to="/donate"
-                  sx={{ color: 'inherit', textDecoration: 'none' }}
+                  sx={{ color: '##93191D', textDecoration: 'none' }}
                 >
                   Donate
-                  {/* <Link href="/" sx={{ color: 'inherit', textDecoration: 'none' }}>Donate</Link> */}
+
                 </Button>
                 <Button component={RouterLink}
                   to="/invest"
                   sx={{ color: 'inherit', textDecoration: 'none' }}
                 >
                   Invest
-                  {/* <Link href="/" sx={{ color: 'inherit', textDecoration: 'none' }}>Invest</Link> */}
+
                 </Button>
-                {/* <Button>
-                  <Link href="/" sx={{ color: 'inherit', textDecoration: 'none' }}>contact</Link>
-                </Button> */}
+
                 <Button
                   variant="contained"
                   component={RouterLink}
-                  to="/login"
+                  to="/donate"
+                  sx={{ backgroundColor: '#93191D'}}
                 >
-                  Login
-                  {/* <Link href="/" sx={{ color: 'inherit', textDecoration: 'none' }}>Login</Link> */}
+                  Donate
+
                 </Button>
-                {/* <Button>
-                  <Link href="/" sx={{ color: 'inherit', textDecoration: 'none' }}>Logout</Link>
-                </Button> */}
+
               </Box>
             </Menu>
           </Box>
@@ -122,8 +123,7 @@ const ResponsiveAppBar = () => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
           >
-            <SyncLockIcon sx={{ color: 'primary.light', fontSize: '2em', marginRight: '.5em' }} />
-            Drew's Vet Project
+
           </Typography>
           <Box sx={{
             flexGrow: 1,
@@ -137,35 +137,14 @@ const ResponsiveAppBar = () => {
               sx={{ color: 'inherit', textDecoration: 'none' }}
             >
               Home
-              {/* <Link href="/" sx={{ color: 'inherit', textDecoration: 'none' }}>Home</Link> */}
             </Button>
-            <Button component={RouterLink}
-              to="/donate"
-              sx={{ color: 'inherit', textDecoration: 'none' }}
-            >
-              Donate
-              {/* <Link href="/" sx={{ color: 'inherit', textDecoration: 'none' }}>Donate</Link> */}
-            </Button>
-            <Button component={RouterLink}
-              to="/invest"
-              sx={{ color: 'inherit', textDecoration: 'none' }}
-            >
-              Invest
-              {/* <Link href="/" sx={{ color: 'inherit', textDecoration: 'none' }}>Invest</Link> */}
-            </Button>
-            {/*  <Button>
-              <Link href="/contact" sx={{ color: 'white', textDecoration: 'none' }}>contact</Link>
-            </Button> */}
             <Button
               variant="contained"
               component={RouterLink}
-              to="/login"
+              to="/donate"
             >
-              Login
+              Donate
             </Button>
-            {/* <Button>
-              <Link href="/" sx={{ color: 'white', textDecoration: 'none' }}>Logout</Link>
-            </Button> */}
           </Box>
         </Toolbar>
       </Container>
